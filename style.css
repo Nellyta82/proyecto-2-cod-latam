@@ -14,47 +14,125 @@
 
 /* Haciendo Cambios al nav */
 
-
-.nav{
-    display: flex;  
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    background-color: rgb(169, 110, 237);
-}
-
-nav ul{
+.main-header{
+    height: 90px;
     display: flex;
-    list-style: none;
     justify-content: space-between;
-}
+    align-items: center;
+    padding: 0 0.4rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.5rem;
+  }
 
-nav ul li h3{
+  .main-logo{
+    color: aliceblue;
+    text-decoration:none;
+   
+  }
+
+  .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    margin-left: -100%;
+    transition: all .2s linear;
+    z-index: 100;
+  }
+
+.nav.show{
+    margin-left: 0;
+  }
+
+.nav-links{
+   
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+.nav-link{
+    margin-top: 2rem;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+.nav-link::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(169, 110, 237);
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+  }
+  
+.nav-link:hover::after {
+    width: 100%;
+  }
+
+
+.main-logo h3{
     font-family: 'Satisfy', cursive;
     padding-left: 5px;
     color: aliceblue;
 }
 
-nav ul li .n2{
+.main-logo .n2{
     padding-left: 15px;
 }
 
-nav ul li h3:hover{
+.main-logo h3:hover{
     color: rgb(169, 110, 237);
 }
 
-nav ul li a{
-    text-decoration: none;
-    font-size: 28px;
-    color: aliceblue;
-    margin-left: 50px;
-}
-
-nav ul li a:hover{
+.nav .nav-link:hover{
     color: rgb(169, 110, 237);
-}
+} 
+
+.menu-hamburguesa {
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  background: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  }
+
+.menu-hamburguesa span {
+  width: 37px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgb(169, 110, 237);
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: all .2s linear;
+  }
+
+.menu-hamburguesa.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: rgb(169, 110, 237);
+  }
+  
+.menu-hamburguesa.close span:nth-child(2){
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  
+.menu-hamburguesa.close span:nth-child(3){
+    display: none;
+  }
 
 /* Haciendo Cambios al logo del CV */
 
@@ -82,7 +160,7 @@ h1{
     text-align: center;
     font-family: 'Satisfy', cursive;
     color: aliceblue;
-    font-size: 36px;
+    font-size: 48px;
     padding-top: 50px;
 }
 
@@ -99,7 +177,7 @@ h1:hover{
 #Inicio h3{
     padding-right: 20px;
     font-size: 25px;
-    font-family: 'Satisfy', cursive;
+    
     color: aliceblue;
 }
 
@@ -126,7 +204,7 @@ p:hover{
 
 /* Haciendo Cambios en el botón */
 
-.Descarga a{
+#Descarga a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,10 +229,10 @@ p:hover{
     width: 30%;
 }
 
-.descarga:hover{
-    background-color: aliceblue;
-    color: rgb(169, 110, 237);
-}
+.descarga:hover{ 
+    background-color: aliceblue; 
+    color: rgb(169, 110, 237); 
+} 
 
 /* Haciendo Cambios en Habilidades y Hobbies */
 
@@ -193,7 +271,7 @@ p:hover{
     margin: auto;
     justify-content: center;
     align-items: center;
-    margin-left: 80px;
+    padding-left: 50px;
 }
 
 .hab-hob ul li:hover{
@@ -205,7 +283,7 @@ p:hover{
 h2{
     font-family: 'DM Sans', sans-serif;
     font-style: oblique;
-    font-size: 28px;
+    font-size: 32px;
     margin: 20px auto;
     text-align: center;
     color: aliceblue;
@@ -229,21 +307,27 @@ ul{
 
 /* Haciendo Cambios en los proyectos */
 
-.proyectos img{
+#proyectos img{
     justify-content: center;
     width: 50%;
     font-size: 20px;
     list-style: none;
     text-align: center;
     margin-top: 20px;
-    
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    background-color: black;   
 }
 
-.proyectos{
+#proyectos img:hover{
+    padding: 30px;
+  }
+
+#proyectos{
     background-color: black;
 }
 
-.proyectos .project{
+#proyectos .project{
     font-size: 40px;
 }
 
@@ -255,6 +339,17 @@ h4{
 }
 
 h4:hover{
+    color: rgb(169, 110, 237);
+}
+
+h5{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+h5:hover{
     color: rgb(169, 110, 237);
 }
 
@@ -290,6 +385,111 @@ button{
     color: rgb(169, 110, 237);
      
 }
+
+/* Haciendo responsivo el Proyecto */
+
+
+@media screen and (min-width: 768px) {
+
+    .menu-hamburguesa {
+      display: none;
+    }
+  
+    .main-logo {
+      flex-basis: 30%;
+    }
+  
+    .nav {
+      position: static;
+      margin: auto;
+      flex-basis: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end; 
+    }
+  
+    .nav-links {
+      width: 100%;
+    }
+  
+    .nav-link {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 1.5rem;
+      margin-right: 20px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+ 
+    #main{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .img-content{
+        padding-top: 100px;
+    }
+
+    #Inicio{
+        display: flex;
+        flex-direction: column;
+        padding-top: 300px;
+    }
+
+    h1{
+        font-size: 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h3{
+        font-size: 18px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    #main{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hab-hob{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    .hab-hob{
+        width: 100%;
+    }
+
+    .hab-hob ul li{
+        width: 100%;
+        padding-right: 20px;
+    }
+}
+    
+
+
+
 
 
 

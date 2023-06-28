@@ -8,27 +8,27 @@
     <script src="https://kit.fontawesome.com/99644a8e3c.js" crossorigin="anonymous"></script>
     <title>Nelly Chirinos</title>
     <link rel="shortcut icon" href="./imágenes/purple.png">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <header>
-        <nav class="nav">
-            <ul>
-                <li>
-                    <h3>Nelly</h3>
-                     <h3 class="n2">Chirinos</h3>
-                </li>   
-                <li>
-                    <a href="#Inicio">Inicio</a>
-                </li>
-                <li>  
-                    <a href="#Proyectos">Proyectos</a>
-                </li>
-                <li>  
-                    <a href="#Contacto">Contacto</a>
-                </li>
-            </ul>            
-        </nav>
+    <header class="main-header">
+        <div class="main-logo">
+            <h3>Nelly</h3>
+            <h3 class="n2">Chirinos</h3>
+        </div class="nav-links" >
+            <nav class="nav" id="nav">
+                <div class="nav-links">
+                    <a href="#Inicio" class="nav-link">Inicio</a>
+                    <a href="#Proyectos" class="nav-link">Proyectos</a>  
+                    <a href="#Contacto" class="nav-link">Contacto</a>
+                </div> 
+            </nav>
+            <button class="menu-hamburguesa" id="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>          
     </header>  
     <hr>
     <main>
@@ -41,8 +41,8 @@
             <div>
                 
             </div>     
-            <h3 id="primero">Programadora Trainee Full-Stack especialista en Frontend</h2>
-            <div class="Descarga">
+            <h3 id="primero">Programadora Full-Stack especialista en Frontend</h2>
+            <div id="Descarga">
                 <a href="./NELLY MERCEDES CHIRINOS TOVAR CV.pdf" download="NELLY MERCEDES CHIRINOS TOVAR CV"><button class="descarga" type="button" onclick="alert('Descarga completa!')">Descarga mi CV</button></a>
             </div>
             <div>
@@ -73,22 +73,21 @@
     </main>
     <hr>
     <section id="Proyectos">
-        <ul class="proyectos">
+        <ul id="proyectos">
             <h4 class="project">Proyectos</h4>
             <br>
             <h4>APP del Clima</h4>
-            <button> <a href="https://proyecto-del-clima-ixwk08h9f-nellyta82.vercel.app/" > <img src="./imágenes/APP-clima.png" alt="imagen-app"/> </a></button>  
-            <h4>Proyecto realizado con React, HTML, Javascript y CSS </h4>
+            <h5>Proyecto realizado con React, HTML, Javascript y CSS </h5>
+            <button> <a href="https://proyecto-del-clima-ixwk08h9f-nellyta82.vercel.app/" > <img src="./imágenes/APP-clima.png" alt="imagen-app"/> </a></button> 
             <br>
             <h4>El mundo de Sanrio</h4>
-            <button>  <a href="https://nellyta82.github.io/El-mundo-de-sanrio/">  <img src="./imágenes/el-mundo-de-sanrio.png" alt="imagen-sanrio" /> </a></button>  
-            <h4>Proyecto realizado con Bootstrap </h4>
+            <h5>Proyecto realizado con Bootstrap </h5>
+            <button>  <a href="https://nellyta82.github.io/El-mundo-de-sanrio/">  <img src="./imágenes/el-mundo-de-sanrio.png" alt="imagen-sanrio" /> </a></button> 
             <br>
             <h4>Llegó la Navidad</h4>
-            <button> <a href="https://nellyta82.github.io/Llego-la-Navidad/index.html"> <img src="./imágenes/navidad.png" alt="imagen-navidad"/> </a></button> 
-            <h4>Proyecto realizado con HTML y CSS</h4>
+            <h5>Proyecto realizado con HTML y CSS</h5>
+            <button> <a href="https://nellyta82.github.io/Llego-la-Navidad/index.html"> <img src="./imágenes/navidad.png" alt="imagen-navidad"/> </a></button>   
             <br>
- 
          </ul>    
     </section>
     <footer id="Contacto">
@@ -105,6 +104,7 @@
         </ul> 
     </footer>
     <script src="./components/Proyectos.js"></script>
+    <script src="./components/Menu.js"></script>
 </body>
 </html>
 
