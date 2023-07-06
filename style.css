@@ -60,6 +60,7 @@
     text-decoration: none;
     font-weight: bold;
     position: relative;
+    margin-left: 20px;
   }
 
 .nav-link::after {
@@ -161,7 +162,7 @@ h1{
     font-family: 'Satisfy', cursive;
     color: aliceblue;
     font-size: 48px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 h1:hover{
@@ -177,7 +178,7 @@ h1:hover{
 #Inicio h3{
     padding-right: 20px;
     font-size: 25px;
-    
+    font-family: 'Satisfy', cursive;
     color: aliceblue;
 }
 
@@ -244,7 +245,6 @@ p:hover{
 .hab-hob{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    line-height: 1.5;
     background-color: rgb(169, 110, 237);
     border-radius: 20px;
     align-items: center;
@@ -263,6 +263,8 @@ p:hover{
     margin-right: auto;
     padding: auto;
     padding-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Satisfy', cursive;
 }
 
 .hab-hob ul li{
@@ -272,6 +274,8 @@ p:hover{
     justify-content: center;
     align-items: center;
     padding-left: 50px;
+    line-height: 0.5;
+    margin-bottom: 20px;
 }
 
 .hab-hob ul li:hover{
@@ -281,8 +285,7 @@ p:hover{
 /* Haciendo cambios en los títulos secundarios */
 
 h2{
-    font-family: 'DM Sans', sans-serif;
-    font-style: oblique;
+    
     font-size: 32px;
     margin: 20px auto;
     text-align: center;
@@ -298,10 +301,9 @@ h2:hover{
 
 ul{
     font-family: 'Mukta', sans-serif;
-    font-style: oblique;
     color: aliceblue;
     font-size: 18px;
-    margin: 20px auto;
+    margin: 20px 20px;
     background-color: rgb(169, 110, 237);
 }
 
@@ -336,6 +338,8 @@ h4{
     justify-content: center;
     align-items: center;
     font-size: 26px;
+    font-family: 'Satisfy', cursive;
+    margin-top: 40px;
 }
 
 h4:hover{
@@ -398,6 +402,10 @@ button{
     .main-logo {
       flex-basis: 30%;
     }
+
+    .main-header{
+        position: fixed;
+    }
   
     .nav {
       position: static;
@@ -413,6 +421,7 @@ button{
   
     .nav-links {
       width: 100%;
+      margin-left: 20px;
     }
   
     .nav-link {
@@ -423,10 +432,11 @@ button{
       justify-content: flex-end;
       font-size: 1.5rem;
       margin-right: 20px;
+      margin-left: 20px;
     }
   }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
  
     #main{
         display: grid;
@@ -472,6 +482,7 @@ button{
         text-align: center;
         align-items: center;
         justify-content: center;
+        line-height: 2;
     }
 
 }
@@ -479,11 +490,13 @@ button{
 @media screen and (max-width: 420px) {
     .hab-hob{
         width: 100%;
+        line-height: 2;
     }
 
     .hab-hob ul li{
         width: 100%;
         padding-right: 20px;
+        line-height: 2;
     }
 }
     
